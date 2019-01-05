@@ -11,11 +11,11 @@ class Api::ListsController < ApplicationController
   end
 
   def create
-    list = @board.lists.new(list_params)
-    if list.save
-      render json: list
+    @list = @board.lists.new(list_params)
+    if @list.save
+      render json: @list
     else
-      render json: list.errors
+      render json: @list.errors
     end
   end
 

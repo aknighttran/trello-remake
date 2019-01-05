@@ -36,6 +36,7 @@ class BoardForm extends React.Component {
           placeholder='Name'
           label='Name'
           value={name}
+          required
           onChange={this.handleChange}
         />
         <Form.Button color='black'>
